@@ -44,7 +44,7 @@ func newBaseRpcServer(address string, rpcServerOpts *rpcServerOptions) *baseRpcS
 		health:  h,
 		metrics: rpcServerOpts.metrics,
 		options: []grpc.ServerOption{grpc.KeepaliveParams(keepalive.ServerParameters{
-			MaxConnectionIdle: defaultConnectionIdleDuration,
+// 			MaxConnectionIdle: defaultConnectionIdleDuration,
 		})},
 	}
 }
