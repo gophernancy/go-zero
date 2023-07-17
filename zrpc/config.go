@@ -17,7 +17,7 @@ type (
 	// A RpcServerConf is a rpc server config.
 	RpcServerConf struct {
 		service.ServiceConf
-		ListenOn      string
+		ListenOn      string             `json:",optional"`
 		Etcd          discov.EtcdConf    `json:",optional,inherit"`
 		Auth          bool               `json:",optional"`
 		Redis         redis.RedisKeyConf `json:",optional"`
