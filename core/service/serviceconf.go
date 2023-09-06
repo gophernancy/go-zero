@@ -23,13 +23,15 @@ const (
 	PreMode = "pre"
 	// ProMode means production mode.
 	ProMode = "pro"
+	// PerMode means performance mode.
+	PerMode = "performance"
 )
 
 // A ServiceConf is a service config.
 type ServiceConf struct {
 	Name       string
 	Log        logx.LogConf
-	Mode       string `json:",default=pro,options=dev|test|rt|pre|pro"`
+	Mode       string `json:",default=pro,options=dev|test|rt|pre|pro|performance"`
 	MetricsUrl string `json:",optional"`
 	// Deprecated: please use DevServer
 	Prometheus prometheus.Config `json:",optional"`
